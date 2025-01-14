@@ -1,0 +1,37 @@
+{
+  "name": "investrea-com",
+  "dockerComposeFile": "docker-compose.yaml",
+  "service": "workspace",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "remoteUser": "vscode",
+  "postCreateCommand": "bash ./.devcontainer/workspace/post-create.sh",
+  "postStartCommand": "bash ./.devcontainer/workspace/post-start.sh",
+  "postAttachCommand": "bash ./.devcontainer/workspace/post-attach.sh",
+  "forwardPorts": [
+    3000
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "editorconfig.editorconfig",
+        "golang.go",
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-pg",
+        "ultram4rine.sqltools-clickhouse-driver",
+        "tamasfe.even-better-toml",
+        "Postman.postman-for-vscode",
+        "typespec.typespec-vscode",
+        "YoavBls.pretty-ts-errors",
+        "aaron-bond.better-comments",
+        "esbenp.prettier-vscode",
+        "mhutchie.git-graph",
+        "moonrepo.moon-console"
+      ],
+      "settings": {
+        "go.alternateTools": {
+          "go": "/home/vscode/.local/share/mise/shims/go"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+---
+import '@fontsource/geist-sans';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWxhbmRtYXJrIj48bGluZSB4MT0iMyIgeDI9IjIxIiB5MT0iMjIiIHkyPSIyMiIvPjxsaW5lIHgxPSI2IiB4Mj0iNiIgeTE9IjE4IiB5Mj0iMTEiLz48bGluZSB4MT0iMTAiIHgyPSIxMCIgeTE9IjE4IiB5Mj0iMTEiLz48bGluZSB4MT0iMTQiIHgyPSIxNCIgeTE9IjE4IiB5Mj0iMTEiLz48bGluZSB4MT0iMTgiIHgyPSIxOCIgeTE9IjE4IiB5Mj0iMTEiLz48cG9seWdvbiBwb2ludHM9IjEyIDIgMjAgNyA0IDciLz48L3N2Zz4="
+		/>
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-slate-100 text-gray-900">
+		<slot />
+	</body>
+</html>
+<style is:global>
+	html {
+		font-family: 'Geist Sans', sans-serif;
+	}
+</style>
